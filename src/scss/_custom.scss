@@ -1,0 +1,101 @@
+// Fonts
+@font-face {
+    font-family: "Amplitude-Book";
+    src:url("../../dist/fonts/Amplitude-Book.ttf");
+}
+
+// container-fluid
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+// Navbar
+
+.tyler-navbar {
+    font-family: Amplitude-Book, Helvetica;
+    font-weight: 600;
+    background-color: $white !important;
+    padding: 0 0;
+    
+    .navbar-nav {
+        .nav-link {
+            padding: 2rem 0.5rem;
+            color: $almost-black;
+            .fa {
+                font-size: 0.7rem;
+                color: $medium-blue;
+            }
+        }
+
+        // .active .nav-link {
+        //     background-color: $medium-blue;
+        //     color: $white;
+        //     .fa {
+        //         font-size: 0.7rem;
+        //         color: $light-green;
+        //     }
+        // }
+
+        .nav-link:hover {
+            color: $white;
+            background-color: $medium-blue;
+            .fa {
+                font-size: 0.7rem;
+                color: $light-green;
+            }
+        }
+
+        .dropdown-toggle::after {
+            content: none;
+        }
+    }
+
+    .input-group .input-group-prepend .input-group-text {
+        padding: 0 0;
+        padding-left: 1rem;
+        border-radius: 0px;
+        border: 0px solid rgba($color: $white, $alpha: 0);
+        border-left: 1px solid $medium-gray;
+        background-color: rgba($color: $white, $alpha: 0);
+        
+    }
+    
+    #tyler-search {
+        border-radius: 0px;
+        border: 0px solid rgba($color: $white, $alpha: 0);
+        border-right: 1px solid $medium-gray;
+    }
+
+    #tyler-search:focus {
+        outline-style: none;
+        box-shadow: none;
+    }
+
+    #tyler-client-support {
+        color: $white;
+        background-color: $medium-blue;
+        margin-left: 1rem;
+    }
+
+    #icon-profile {
+        margin-left: 1rem;
+    }
+
+    .login-group {
+        ul {
+            padding-top: 1rem;
+            padding-left: 1rem;
+            li {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                list-style: none;
+                a {
+                    color: $almost-black;
+                    text-decoration: none;
+                }
+            }
+        } 
+    }
+}
