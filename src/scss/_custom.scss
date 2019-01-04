@@ -4,12 +4,31 @@
     src:url("../../dist/fonts/Amplitude-Book.ttf");
 }
 
+@font-face {
+    font-family: "Amplitude-Bold";
+    src:url("../../dist/fonts/Amplitude-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Trade-Gothic-Medium";
+    src:url("../../dist/fonts/TradeGothic.ttf");
+}
+
+@font-face {
+    font-family: "Trade-Gothic-Bold";
+    src:url("../../dist/fonts/TradeGothicBold.ttf");
+}
+
 // container-fluid
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
+    // Get rid of the extra padding when nesting containers
+    .container {
+        padding-left:0;
+        padding-right:0;
+    }
 }
-
 
 // Navbar
 
@@ -61,6 +80,10 @@
         background-color: rgba($color: $white, $alpha: 0);
         
     }
+    // Overriding Bootstrap negative margin
+    .input-group-prepend {
+        margin-right: 0px;
+    }
     
     #tyler-search {
         border-radius: 0px;
@@ -75,7 +98,7 @@
 
     #tyler-client-support {
         color: $white;
-        background-color: $medium-blue;
+        //background-color: $medium-blue;
         margin-left: 1rem;
     }
 
@@ -99,3 +122,55 @@
         } 
     }
 }
+
+// Hero
+.tyler-hero {
+    background: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 29rem;
+    color: $almost-black;
+    margin-bottom: 0;
+    h1 {
+        font-family: Amplitude-Bold, Helvetica;
+        font-size: 42px;
+    }
+    p {
+        font-family: Trade-Gothic-Medium, Helvetica;
+        font-size: 20px;
+        max-width: 62%;
+    }
+    .btn {
+        font-family: Trade-Gothic-Bold, Helvetica;
+        font-size: 20px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+// Main Nav
+/* #tyler-nav {
+    .container {
+        padding: 0 0;
+    }
+    h2 {
+        background: url("../img/pattern.png");
+        color: $white;
+    }
+} */
+
+// Helper class
+// Extend content to the right border of its parent 
+// .push-right {
+//     margin-right: 0;
+//     padding-right: 0;
+// }
+
+// #my-container {
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }
+

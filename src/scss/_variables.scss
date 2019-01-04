@@ -12,6 +12,10 @@ $dark-gray: #75777e;
 $medium-gray: #8a929b;
 $light-gray: #f3f3f8;
 
-// Buttons
+// Let's make Tyler blue the primary color
+$theme-colors: (
+  "primary": $medium-blue,
+);
 
+// Buttons
 $btn-border-radius: 2rem;
