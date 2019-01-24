@@ -12824,6 +12824,20 @@ a.text-primary:hover, a.text-primary:focus {
   src: url("../../dist/fonts/TradeGothicBold.ttf");
 }
 
+/* ==Buttons== */
+.btn-primary::after {
+  font-family: FontAwesome;
+  font-size: 14px;
+  content: "\f054";
+  color: #fdc302;
+  margin-right: -12px;
+  float: right;
+}
+
+.btn-primary:hover::after {
+  color: #cede71;
+}
+
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
@@ -12832,6 +12846,17 @@ a.text-primary:hover, a.text-primary:focus {
 .container-fluid .container {
   padding-left: 0;
   padding-right: 0;
+}
+
+/* only apply on screens over 576px -- the `sm` breakpoint */
+@media (min-width: 576px) {
+  .abs-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
 }
 
 .tyler-navbar {
@@ -12878,13 +12903,13 @@ a.text-primary:hover, a.text-primary:focus {
   margin-right: 0px;
 }
 
-.tyler-navbar #tyler-search {
+.tyler-navbar .tyler-search {
   border-radius: 0px;
   border: 0px solid rgba(255, 255, 255, 0);
   border-right: 1px solid #8a929b;
 }
 
-.tyler-navbar #tyler-search:focus {
+.tyler-navbar .tyler-search:focus {
   outline-style: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -12900,6 +12925,7 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .tyler-navbar .login-group ul {
+  list-style: none;
   padding-top: 1rem;
   padding-left: 1rem;
 }
@@ -12907,7 +12933,6 @@ a.text-primary:hover, a.text-primary:focus {
 .tyler-navbar .login-group ul li {
   font-size: 0.8rem;
   text-transform: uppercase;
-  list-style: none;
 }
 
 .tyler-navbar .login-group ul li a {
@@ -12952,3 +12977,129 @@ a.text-primary:hover, a.text-primary:focus {
         color: $white;
     }
 } */
+.tyler-about h2 {
+  font-family: Amplitude-Book, Helvetica;
+  font-size: 32px;
+  color: #3c3f46;
+}
+
+.tyler-about p {
+  font-family: Trade-Gothic-Medium, Helvetica;
+  font-size: 20px;
+}
+
+.tyler-about p strong {
+  font-family: Amplitude-Bold, Helvetica;
+  font-weight: 1000;
+}
+
+#tyler-browse {
+  background: url("../img/poly-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 30rem;
+  padding-top: 8rem;
+}
+
+#tyler-browse h3 {
+  margin-bottom: 0.5rem;
+  font-family: Amplitude-Book, Helvetica;
+  font-size: 28px;
+  color: #3c3f46;
+  padding-left: 0.5rem;
+}
+
+#tyler-browse .icon img {
+  margin-bottom: 1rem;
+}
+
+#tyler-browse ul {
+  list-style: none;
+  font-family: Trade-Gothic-Bold, Helvetica;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+  padding-left: 0;
+}
+
+#tyler-browse ul li a {
+  color: #1078c0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  padding-left: 0.5rem;
+}
+
+#tyler-browse ul li a:hover {
+  text-decoration: none;
+}
+
+#tyler-browse ul li:hover {
+  background-color: rgba(243, 243, 248, 0.5);
+}
+
+#tyler-browse ul li:hover a::after {
+  font-family: FontAwesome;
+  font-size: 14px;
+  content: "\f054";
+  color: #cede71;
+  padding-right: 0.8rem;
+  float: right;
+}
+
+#tyler-browse .col:nth-child(n+2) {
+  border-left: 1px solid #6bb5c0;
+}
+
+#tyler-browse a#browse-all {
+  color: #1078c0;
+  text-decoration: none;
+  font-family: Trade-Gothic-Bold, Helvetica;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+#tyler-who-we-serve {
+  background: url("../img/bg---image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 34rem;
+  padding-top: 2rem;
+  color: #fff;
+}
+
+#tyler-who-we-serve h2 {
+  font-family: Amplitude-Book, Helvetica;
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+
+#tyler-who-we-serve h2 strong {
+  font-family: Amplitude-Bold, Helvetica;
+}
+
+#tyler-who-we-serve p {
+  font-family: Trade-Gothic-Medium, Helvetica;
+  font-size: 20px;
+  text-align: center;
+}
+
+#tyler-who-we-serve a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Trade-Gothic-Medium, Helvetica;
+}
+
+#tyler-who-we-serve a:hover::after {
+  font-family: FontAwesome;
+  font-size: 14px;
+  content: "\f054";
+  color: #cede71;
+  margin-left: 0.2rem;
+}
